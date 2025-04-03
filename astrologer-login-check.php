@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_name'] = $row['AstroName'];
 
             // Redirect to main page
-            header("Location: astrologer-main-page.html");
+            header("Location: main.html");
             exit();
         } else {
             // Invalid password

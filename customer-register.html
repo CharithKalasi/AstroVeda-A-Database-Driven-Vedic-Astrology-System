@@ -41,13 +41,12 @@
         .logo {
             width: 48px;
             height: 48px;
+            background-color: white;
             border-radius: 50%;
         }
         .site-title {
             font-size: 1.5rem;
             font-weight: bold;
-            padding-left: 450px;
-
         }
         main {
             flex: 1;
@@ -110,21 +109,11 @@
             background-color: black;
             color: #e9d16f;
             text-align: center;
-            padding: 0.5rem;
+            padding: 0.5rem; /* Reduced size */
             position: fixed;
             bottom: 0;
             width: 100%;
-            font-size: 0.875rem;
-        }
-        .auth-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin-left: 1rem;
-        }
-        .auth-links a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
+            font-size: 0.875rem; /* Slightly smaller text */
         }
     </style>
 </head>
@@ -137,8 +126,8 @@
                     <span class="site-title">ASTROVEDA</span>
                 </div>
                 <div class="auth-links">
-                 <a href="customer-login.html">LOGIN</a>
-                    </div>              
+                    <a href="customer-login.html">LOG IN</a>
+                </div>
             </div>
         </div>
     </header>
@@ -161,7 +150,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone"  maxlength="10" 
+                    <input type="text" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" 
                placeholder="1234567890" required>
         <small>Enter 10 digits without spaces or dashes</small>
                 </div>

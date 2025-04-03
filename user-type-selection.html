@@ -15,30 +15,10 @@
             background: linear-gradient(to bottom, #e9d16f, #e9d16f80);
             min-height: 100vh;
         }
-        .header {
+        header {
             background-color: black;
             color: #e9d16f;
             padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        #header1 img {
-            width: 73px;
-            height: 73px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        
-        
-        #header2 h1 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #e9d16f;
-            margin: 15px;
-            padding-right: 479px; 
-            align-items: center; 
         }
         .container {
             width: 90%;
@@ -125,15 +105,20 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <div id="header1">
-            <img src="https://cdn.dribbble.com/userupload/11803040/file/original-045b55481072df727872aa7f326848ac.jpg?resize=400x300&vertical=center" width="150px" style="border-radius: 50%; object-fit: cover;">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <div class="logo"></div>
+                    <span class="site-title">ASTROVEDA</span>
+                </div>
+                <div class="auth-links">
+                    <a href="#">LOG IN</a>
+                    <a href="#">REGISTER</a>
+                </div>
+            </div>
         </div>
-        <div id="header2" style="padding-right: 40px; margin-right: 100px;">
-            <h1><big>ASTROVEDA</big></h1>
-        </div>
-    </div>
-    <br /><br />
+    </header>
 
     <main>
         <div class="container">

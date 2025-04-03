@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astroveda - Customer Login</title>
+    <title>Astroveda - Customer Registration</title>
     <style>
         body, html {
             margin: 0;
@@ -26,7 +26,7 @@
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            text-align: center; /* Center-align content */
+            text-align: center;
         }
         .header-content {
             display: flex;
@@ -53,15 +53,16 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center; /* Center content horizontally */
+            align-items: center;
             padding: 2rem 1rem;
+            margin-bottom: 50px; /* Space for footer */
         }
-        h1 {
+        h2 {
             font-size: 2rem;
             color: black;
             margin-bottom: 1rem;
         }
-        .login-form {
+        .register-form {
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
             padding: 2rem;
@@ -78,8 +79,12 @@
             margin-bottom: 0.5rem;
             color: #333;
         }
+        input[type="text"],
         input[type="email"],
-        input[type="password"] {
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        select {
             width: 100%;
             padding: 0.5rem;
             border: 1px solid #ccc;
@@ -100,27 +105,15 @@
             background-color: black;
             color: #e9d16f;
         }
-        .register-prompt {
-            margin-top: 1rem;
-            color: black;
-        }
-        .register-link {
-            color: black;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        .register-link:hover {
-            color: #d9c15f;
-        }
-        .auth-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin-left: 1rem;
-        }
-        .auth-links a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
+        footer {
+            background-color: black;
+            color: #e9d16f;
+            text-align: center;
+            padding: 0.5rem; /* Reduced size */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.875rem; /* Slightly smaller text */
         }
     </style>
 </head>
@@ -129,12 +122,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-container">
-                    <div class="logo"></div>
-                    <span class="site-title">ASTROVEDA</span>
-                </div>
-                <div class="auth-links">
-                    <a href="#">LOG IN</a>
-                    <a href="#">REGISTER</a>
+                    <div id="header1"> 
+                        <img src="https://cdn.dribbble.com/userupload/11803040/file/original-045b55481072df727872aa7f326848ac.jpg?resize=400x300&vertical=center" width="150px" style="border-radius: 50%; object-fit: cover;">
+                    </div>
+                   <span class="site-title">ASTROVEDA</span>
                 </div>
             </div>
         </div>
@@ -142,24 +133,37 @@
 
     <main>
         <div class="container">
-            <h1>Customer Login</h1>
-            <form class="login-form" action="http://localhost/Astroveda/customer-login-check.php" method="post">
+            <h2>Book Pooja</h2>
+            <form class="register-form" action="http://localhost/Astroveda/cregister-check.php" method="post">
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required aria-required="true">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
+
                 <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required aria-required="true">
+                    <label for="name">Venue:</label>
+                    <input type="text" id="name" name="Venue" required>
                 </div>
-                <button type="submit">Login</button>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="Date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" 
+               placeholder="1234567890" required>
+        <small>Enter 10 digits without spaces or dashes</small>
+                </div>
+
+                
+                <button type="submit">Book Now</button>
             </form>
-            <p class="register-prompt">
-                Don't have an account? <a href="customer-register.html" class="register-link">Register Now!</a>
-            </p>
         </div>
     </main>
-    <footer style="background-color: black; color: #e9d16f; text-align: center; padding: 1rem; position: fixed; bottom: 0; width: 100%;">
+
+    <footer>
         <p>Powered by Astroveda</p>
     </footer>
     <script>

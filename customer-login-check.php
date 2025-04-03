@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_name'] = $row['CustName'];
 
             // Redirect to main page
-            header("Location: astrovedaProject/astroveda.html");
+            header("Location: main.html");
             exit();
         } else {
             // Invalid password
